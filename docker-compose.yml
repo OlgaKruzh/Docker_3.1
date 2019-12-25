@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+    postgres:
+      image: postgres:12.0-alpine
+      ports: 
+        - '5432:5432'
+      volumes:
+        - ./data:/var/lib/postgres/data
+      environment:
+        - POSTGRES_PASSWORD=12345
+        - POSTGRES_USER=app
